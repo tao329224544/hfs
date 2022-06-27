@@ -1,37 +1,91 @@
-## Welcome to GitHub Pages
+# HFS: HTTP File Server
+<img alt="logo and motto" src="https://github.com/rejetto/hfs/raw/main/hfs-logo-color-motto.svg" />
 
-You can use the [editor on GitHub](https://github.com/rejetto/hfs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+HFS is the best way via web to access or share files from your disk.
 
-### Markdown
+- It's a server software, share files **fresh from your disk**. Don't rely on services, be independent! 
+- It's all very **fast**. Try download zipping 100GB, it starts immediately!
+- **Easy to use**. HFS tries to detect problems and suggest solutions.
+- Share **even a single file** with our *virtual file system*, even with a different name, all without touching the real file. Present things the way you want!
+- **Watch** all activities in real-time.
+- **Control bandwidth**, decide how much to give.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This project is in an early stage, few things are missing, but it already rocks!
 
-```markdown
-Syntax highlighted code block
+This is a full rewrite of [the Delphi version](https://github.com/rejetto/hfs2).
+You won't find all previous features here (yet), but still we got:
 
-# Header 1
-## Header 2
-### Header 3
+## How does it work
 
-- Bulleted
-- List
+- run HFS on your computer, configuration page automatically shows up
+- select what files and folders you want to be accessible
+- possibly create accounts and limit access to files
+- access those files from a phone or another computer just using a browser
 
-1. Numbered
-2. List
+## Features
 
-**Bold** and _Italic_ and `Code` text
+- https
+- unicode
+- virtual file system
+- mobile friendly front-end
+- search
+- accounts
+- resumable downloads
+- download folders as zip archive
+- simple website serving
+- plug-ins
+- log file
+- speed throttler
+- admin web interface
+- virtual hosting (plug-in)
+- anti-brute-force (plug-in)
 
-[Link](url) and ![Image](src)
-```
+## Installation
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+1. go to https://github.com/rejetto/hfs/releases
+2. click on `Assets`
+3. **download** the right version for your computer
+4. launch `hfs` file
+5. the browser should automatically open on `localhost` address, so you can configure the rest in the Admin panel.
+   - if a browser cannot be opened on the computer where you are installing HFS, 
+     you should enter this command in HFS console: `create-admin <PASSWORD>`
 
-### Jekyll Themes
+If you access *Admin panel* via localhost, by default HFS **won't** require your to login.
+If you don't like this behavior, disable it in the Admin panel or enter this console command `config localhost_admin false`.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rejetto/hfs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Other systems
 
-### Support or Contact
+If your system is not Windows/Linux/Mac, you can try this alternative version:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+1. install node.js version 16+ from https://nodejs.org/
+2. download and unzip `hfs-node.zip`
+3. launch `./run`
+
+## Plug-ins
+
+To install a plugin you just copy its folder inside `plugins` folder.
+
+Delete it to uninstall.
+
+HFS will ignore all folders with `-disabled` at the end of the name.
+
+## Why you should upgrade from HFS 2.x to 3
+
+As you can see from the list of features, we already have some goods that you cannot find in HFS 2.
+Other than that, you can also consider: 
+
+- it's more robust: it was designed to be an always-running server, while HFS 1-2 was designed for occasional usage (transfer and quit) 
+- passwords are never really stored, just a non-reversible hash is
+- more flexible permissions
+
+But you may still want to stay with HFS 2.x (so far) for the following reasons
+
+- smaller
+- more tested
+- classic window interface (can be easier for some people)
+
+## License
+
+[GPLv3](https://github.com/rejetto/hfs/blob/master/LICENSE.txt)
