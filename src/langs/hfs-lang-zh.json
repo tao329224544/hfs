@@ -100,6 +100,15 @@
         "upload_finished": "上传{n} 结束 ({size})",
         "upload_errors": "上传失败{n} 失败",
 
-        "download counter": "download 计数"
+        "download counter": "download 计数",
+        
+         "Download":"下载",
+        "File menu":"文件详情",
+        "Size":"文件大小",
+        "Name":"文件名",
+        "file_open": "打开",
+        "Timestamp":"更新时间",
+        "Missing permission": "系统权限不足",
+        "Folder menu": "文件夹选项"
     }
 }
